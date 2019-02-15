@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AddSubject"
     android:layout_weight="0"
     android:orientation="vertical"
-    android:background="@drawable/backdrop">
+    android:background="@drawable/backdrop"
+    android:padding="20dp">
 
 
     <EditText
         android:id="@+id/subjectName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Subject Name" />
+        android:hint="Subject Name"
+        android:textSize="25sp"/>
 
     <EditText
         android:id="@+id/subjectCode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Code" />
-    <EditText
-        android:id="@+id/noOfStudents"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Total no of Students"
-        android:inputType="numberSigned" />
+        android:hint="Code"
+        android:textSize="25sp"
+        android:layout_marginTop="10dp"/>
 
     <Button
         android:id="@+id/addSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Add" />
+        android:text="Add Subject"
+        android:textSize="30sp"/>
 
 
 

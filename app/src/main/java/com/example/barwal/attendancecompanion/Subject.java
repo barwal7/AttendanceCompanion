@@ -1,15 +1,24 @@
 package com.example.barwal.attendancecompanion;
 
+import java.util.ArrayList;
+
 public class Subject {
 
     private String subjectName;
     private String subjectCode;
-    private int noOfStudents;
+    private int noOfLectures = 0;
 
-    public Subject(String subjectName, String subjectCode, int noOfStudents) {
+
+
+    public Subject(String subjectName, String subjectCode) {
         this.subjectName = subjectName;
         this.subjectCode = subjectCode;
-        this.noOfStudents = noOfStudents;
+    }
+
+    public Subject(String subjectName, String subjectCode, int noOfLectures) {
+        this.subjectName = subjectName;
+        this.subjectCode = subjectCode;
+        this.noOfLectures = noOfLectures;
     }
 
     public String getSubjectName() {
@@ -20,7 +29,8 @@ public class Subject {
         return subjectCode;
     }
 
-    public int getNoOfStudents() {
-        return noOfStudents;
+
+    public String toString() {
+        return this.subjectName+" : "+this.subjectCode;
     }
 }

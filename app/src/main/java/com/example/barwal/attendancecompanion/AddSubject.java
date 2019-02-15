@@ -12,7 +12,6 @@ public class AddSubject extends AppCompatActivity {
 
     EditText subjectName;
     EditText subjectCode;
-    EditText noOfStudents;
     Button addSubject;
 
     @Override
@@ -22,19 +21,20 @@ public class AddSubject extends AppCompatActivity {
 
         subjectCode = findViewById(R.id.subjectCode);
         subjectName = findViewById(R.id.subjectName);
-        noOfStudents = findViewById(R.id.noOfStudents);
         addSubject = findViewById(R.id.addSub);
+        final SubjectDAO dao = new SubjectDAO(this);
 
 
         addSubject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!(subjectName.getText().toString().isEmpty() || subjectName.getText().toString().isEmpty() || noOfStudents.getText().toString().isEmpty()))
+                if(!(subjectName.getText().toString().isEmpty() || subjectName.getText().toString().isEmpty()))
                 {
                     String subName = subjectName.getText().toString();
                     String subCode = subjectCode.getText().toString();
-                    int totalStudents = Integer.parseInt(noOfStudents.getText().toString());
-                    Subject sub = new Subject(subName,subCode,totalStudents);
+                    dao.insert(new Subject(subName,subCode));
+                    dao.close();
+                    Toast.makeText(getApplicationContext(),"Subject Added!",Toast.LENGTH_LONG).show();
                     finish();
 
                 } else {

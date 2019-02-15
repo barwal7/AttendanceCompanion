@@ -1,17 +1,21 @@
 package com.example.barwal.attendancecompanion;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends Activity {
 
     Button addSubject;
-    public ArrayList<Subject> mSubject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +31,25 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        loadStudents();
     }
-    public void newSubject(Subject sub) {
-        mSubject.add(sub);
+
+    private void loadStudents() {
+        SubjectDAO dao = new SubjectDAO(this);
+        List<Subject> subjects = dao.listAll();
+        dao.close();
+        ArrayAdapter<Subject> listArrayAdapter = new ArrayAdapter<Subject>(this,
+                android.R.layout.simple_list_item_1,
+                subjects);
+        ListView listView = findViewById(R.id.subject_list);
+        listView.setAdapter(listArrayAdapter);
     }
+
+    protected void onResume() {
+        super.onResume();
+        loadStudents();
+    }
+
 
 
 }
