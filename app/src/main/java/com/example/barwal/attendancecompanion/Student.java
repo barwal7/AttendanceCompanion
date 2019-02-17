@@ -3,13 +3,11 @@ package com.example.barwal.attendancecompanion;
 public class Student {
 
     private int rollNo;
-    private int year;
     private String name;
 
 
-    public Student(int rollNo, String name, int year) {
+    public Student(int rollNo, String name) {
         this.rollNo = rollNo;
-        this.year = year;
         this.name = name;
     }
 
@@ -17,11 +15,10 @@ public class Student {
         return rollNo;
     }
 
-    public int getYear() {
-        return year;
-    }
-
     public String getName() {
         return name;
+    }
+    public String toString() {
+        return this.rollNo+" : "+this.getName();
     }
 }

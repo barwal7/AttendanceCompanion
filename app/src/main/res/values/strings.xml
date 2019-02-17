@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Attendance Companion</string>
+    <string name="please_enter_the_student_details">Please Enter the Student Details</string>
 </resources>

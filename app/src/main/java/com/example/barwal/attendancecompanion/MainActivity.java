@@ -7,9 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -31,10 +28,10 @@ public class MainActivity extends Activity {
                 startActivity(intent);
             }
         });
-        loadStudents();
+        loadSubjects();
     }
 
-    private void loadStudents() {
+    private void loadSubjects() {
         SubjectDAO dao = new SubjectDAO(this);
         List<Subject> subjects = dao.listAll();
         dao.close();
@@ -47,7 +44,7 @@ public class MainActivity extends Activity {
 
     protected void onResume() {
         super.onResume();
-        loadStudents();
+        loadSubjects();
     }
 
 
