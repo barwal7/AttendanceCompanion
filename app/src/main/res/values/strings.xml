@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Attendance Companion</string>
     <string name="please_enter_the_student_details">Please Enter the Student Details</string>
+    <string name="start">Start</string>
+
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="attendance_companion">Attendance Companion</string>
+    <string name="title_activity_take_attendance">TakeAttendanceActivity</string>
 </resources>

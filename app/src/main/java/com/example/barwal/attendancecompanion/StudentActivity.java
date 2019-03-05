@@ -2,7 +2,6 @@ package com.example.barwal.attendancecompanion;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -32,7 +31,7 @@ public class StudentActivity extends Activity {
 
     private void loadStudents() {
         StudentDAO dao = new StudentDAO(this);
-        List<Student> students = dao.listAll();
+        List<Student> students = dao.listAllStudents();
         dao.close();
         ArrayAdapter<Student> listArrayAdapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1,

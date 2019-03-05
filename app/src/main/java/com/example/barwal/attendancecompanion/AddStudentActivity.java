@@ -30,7 +30,7 @@ public class AddStudentActivity extends Activity {
                 {
                     String name = studentName.getText().toString();
                     int roll = Integer.parseInt(rollNo.getText().toString());
-                    dao.insert(new Student(roll,name));
+                    dao.insertStudent(new Student(roll,name));
                     dao.close();
                     Toast.makeText(getApplicationContext(),name+" was Added!",Toast.LENGTH_LONG).show();
                     finish();

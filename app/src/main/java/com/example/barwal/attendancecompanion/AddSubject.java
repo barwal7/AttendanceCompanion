@@ -22,7 +22,7 @@ public class AddSubject extends AppCompatActivity {
         subjectCode = findViewById(R.id.subjectCode);
         subjectName = findViewById(R.id.subjectName);
         addSubject = findViewById(R.id.addSub);
-        final SubjectDAO dao = new SubjectDAO(this);
+        final StudentDAO dao = new StudentDAO(this);
 
 
         addSubject.setOnClickListener(new View.OnClickListener() {
@@ -32,7 +32,8 @@ public class AddSubject extends AppCompatActivity {
                 {
                     String subName = subjectName.getText().toString();
                     String subCode = subjectCode.getText().toString();
-                    dao.insert(new Subject(subName,subCode));
+                    dao.insertSubject(new Subject(subName,subCode));
+                    dao.addSubject(subName);
                     dao.close();
                     Toast.makeText(getApplicationContext(),"Subject Added!",Toast.LENGTH_LONG).show();
                     finish();
