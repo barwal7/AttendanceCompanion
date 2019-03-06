@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="About"
+        android:textSize="50dp"
+        android:textAppearance="@android:style/TextAppearance.DialogWindowTitle"/>
+
+    <TextView
+        android:id="@+id/first"
+        android:layout_below="@id/title"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/this_application_allows_for_roll_calling_through_an_android_device_the_attendance_is_taken_using_checkboxes_and_is_stored_into_a_database_by_using_the_sqlite_android_repository"/>
+
+    <TextView
+        android:layout_below="@id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="It allows us to : "/>
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new Students"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add new Subjects"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Take attendance"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View attendance Subject wise"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/second"
+        android:layout_below="@id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This app was developed by joint efforts of 7th sem CSE students of UIIT Shimla. This project was made possible by the help and guidance of our guide Mr. Rajesh Chauhan. The students are : "/>
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_below="@id/second"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63008: Anchal Barwal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63022: Saurav Kundlas"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63032: Anurag Rathore"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="63057: Keerti Kumar"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/third"
+        android:layout_below="@id/l2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The code for this application can be found at the following Github repository:"/>
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_below="@id/third"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/githublink"/>
+
+
+</RelativeLayout>

@@ -3,9 +3,14 @@
     <string name="please_enter_the_student_details">Please Enter the Student Details</string>
     <string name="start">Start</string>
 
+    <string name="githublink">
+        <a href="https://github.com/barwal7/AttendanceCompanion.git">Github</a>
+    </string>
+
     <string name="title_activity_splash">SplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="attendance_companion">Attendance Companion</string>
     <string name="title_activity_take_attendance">TakeAttendanceActivity</string>
+    <string name="this_application_allows_for_roll_calling_through_an_android_device_the_attendance_is_taken_using_checkboxes_and_is_stored_into_a_database_by_using_the_sqlite_android_repository">This application allows for roll calling through an android device. The attendance is taken using checkboxes and is stored into a database by using the SQLITE android repository.</string>
 </resources>

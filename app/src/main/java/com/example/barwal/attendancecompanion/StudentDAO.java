@@ -63,8 +63,7 @@ public class StudentDAO extends SQLiteOpenHelper {
         while(cursor.moveToNext()){
             String name = cursor.getString(cursor.getColumnIndex("NAME"));
             String code = cursor.getString(cursor.getColumnIndex("CODE"));
-            int noOfLectures = cursor.getInt(cursor.getColumnIndex("NO_OF_LECTURES"));
-            Subject sub = new Subject(name,code,noOfLectures);
+            Subject sub = new Subject(name,code);
             subjects.add(sub);
         }
         return subjects;
@@ -81,5 +80,8 @@ public class StudentDAO extends SQLiteOpenHelper {
         int count = cursor.getCount();
         cursor.close();
         return count;
+    }
+
+    public void updateAttendance(int[] i) {
     }
 }

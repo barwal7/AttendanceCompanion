@@ -24,7 +24,8 @@
             android:layout_height="200dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/savebutton"/>
+            android:src="@drawable/savebutton"
+        android:onClick="saveAttendance"/>
 
 </RelativeLayout>
 
